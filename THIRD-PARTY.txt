@@ -1,0 +1,4 @@
+List of third-party licenses:
+The Apache License, Version 2.0: @API Guardian API, opentest4j, Maven
+Eclipse Public License v2.0: JUnit Jupiter API,  JUnit Jupiter Engine, JUnit Platform Commons, JUnit Platform Engine API
+GNU General Public License, version 2, with the Classpath Exception: OpenJDK
