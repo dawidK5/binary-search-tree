@@ -1,9 +1,3 @@
-/**
- * <code>BinarySearchTreeTest</code> is a JUnit test class for BinarySearchTree (BST) and its subclass NodeObj.
- * @author  dawidK5
- * @version %I%, %G%
- */
-
 package org.example.binarysearchtree;
 
 import org.junit.jupiter.api.AfterEach;
@@ -13,7 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
 
-
+/**
+ * <code>BinarySearchTreeTest</code> is a JUnit test class for BinarySearchTree (BST) and its subclass NodeObj.
+ * @author  dawidK5
+ * @version %I%, %G%
+ */
 public class BinarySearchTreeTest {
 
     String[] quoteArray = {"So-called", "natural", "language", "is", "wonderful", "for", "the", "purposes",

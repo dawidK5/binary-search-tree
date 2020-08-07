@@ -1,16 +1,3 @@
-/**
- * <code>BinarySearchTree</code> (also called BST) is a class that generates a binary tree for storing values of a
- * specific <code>Comparable</code> type T. Adding nodes creates multiple instances of inner class called NodeObj.
- * This class (BST) bears some resemblance to the Java <code>TreeSet</code>, but this BST does not self-balance and can
- * ONLY be balanced using the method provided and this class is NOT 'thread-safe'.
- * BST can be exported as: a list (pre/in/post -order) or a TreeSet. Basic functionality of public methods includes
- * adding and removing values and nodes/subtrees from a different BST, getting parent nodes, keys, adding values from
- * arrays, lists, getting tree height and more.
- *
- * @author dawidK5
- * @version %I%, %G%
- *
- */
 package org.example.binarysearchtree;
 
 import java.util.HashSet;
@@ -19,8 +6,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
 
-
-
+/**
+ * <code>BinarySearchTree</code> (also called BST) is a class that generates a binary tree for storing values of a
+ * specific <code>Comparable</code> type T. Adding nodes creates multiple instances of inner class called NodeObj.
+ * This class (BST) bears some resemblance to the Java <code>TreeSet</code>, but this BST does not self-balance as the
+ * tree structure preserves the order of insertion. Thus, this BST can ONLY be balanced using the method provided and
+ * this class is NOT 'thread-safe'.
+ * BST can be exported as: a list (pre/in/post -order) or a TreeSet. Basic functionality of public methods includes
+ * adding and removing values and nodes/subtrees from a different BST, getting parent nodes, keys, adding values from
+ * arrays, lists, getting tree height and more.
+ *
+ * @author dawidK5
+ * @version %I%, %G%
+ *
+ */
 public class BinarySearchTree<T extends Comparable<T>> {
     private NodeObj root; // root node
 
@@ -460,7 +459,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @param myNode    the NodeObj to be removed
      * @return          the node key of type T if removed successfully;
      *                  <code>null</code> if this node is not present in this tree
-     * @see             #removeNode(NodeObj, NodeObj)
      */
     public T removeNode(NodeObj myNode) {
         if (!contains(myNode.key)) {
@@ -476,6 +474,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @param parentNode    the parent NodeObj of myNode
      * @return              the node key of type T if removed successfully;
      *                      <code>null</code> if this node is not present in this tree
+     * @see                 #removeNode(NodeObj)
      */
     private T removeNode(NodeObj myNode, NodeObj parentNode) {
         boolean leftOfParent;
