@@ -32,7 +32,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
     /**
      * Class constructor
      */
-    BinarySearchTree() {
+    public BinarySearchTree() {
         this.root = new NodeObj();
         this.allNodeKeys = new HashSet<T>(10);
     }
@@ -41,7 +41,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * Class constructor specifying the root node value/key
      * @param item          the value of type T that root key will be set to
      */
-    BinarySearchTree (T item) {
+    public BinarySearchTree (T item) {
         this.root = new NodeObj(item);
         this.allNodeKeys = new HashSet<T>(10);
         this.allNodeKeys.add(root.key);
@@ -51,7 +51,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * Class constructor
      * @param itemsArray    the array of values to be added to the tree
      */
-    BinarySearchTree (T[] itemsArray) {
+    public BinarySearchTree (T[] itemsArray) {
         this.root = new NodeObj();
         this.allNodeKeys = new HashSet<T>(itemsArray.length);
         this.allNodeKeys.add(root.key);
@@ -63,9 +63,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * value is added to this binary search tree. Each instance contains 2 pointers: left and right, and a key of
      * type T.
      */
-    class NodeObj {
-        NodeObj left, right;
-        T key;
+    public class NodeObj {
+        protected NodeObj left, right;
+        protected T key;
 
         /**
          * Class constructor specifying node key
@@ -112,6 +112,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
         /**
          * Sets the value of current key to the value specified and updates the list of all keys in this BST
+         * @param key       the key of type T to overwrite current node key
          */
         public void setKey(T key) {
             allNodeKeys.remove(this.key);
