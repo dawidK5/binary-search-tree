@@ -1,4 +1,6 @@
-This license only applies to raw source files available in this project. Building this project or generating a package may involve acceptance of additional licenses. More information in THIRD-PARTY.txt
+This license only applies to source code written by me and available in this project, excluding any imports or plugins. 
+Building this project or generating a package may involve acceptance of additional licenses. 
+More information in THIRD-PARTY.txt
 
 MIT License
 
